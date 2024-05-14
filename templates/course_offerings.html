@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Offerings</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css"/>
+    <style>
+        body {
+            background-color: #d9f2fc;
+        }
+
+        .container {
+            background-color: #e5f4f2;
+            margin-top: 50px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        }
+
+        header {
+            background-color: rgb(203, 215, 255);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav ul li a.active {
+            background-color: blue;
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button.enroll-btn {
+            cursor: pointer;
+            border: none;
+            background: blue;
+            color: white;
+            padding: 7px 18px;
+            border-radius: 500px;
+            transition: background-color 0.3s ease;
+        }
+
+        button.enroll-btn:hover {
+            background-color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <nav>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="" class="nav-link active">Classes</a></li>
+                <li class="nav-item"><a href="/courses" class="nav-link">My Profile</a></li>
+                <!-- <li class="nav-item"><a href="/doubts" class="nav-link">Ask Doubt</a></li> -->
+                <li style="margin-left: 700px; margin-top: 10px;"><a href="/logout" >Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 style="text-align: center;">COURSE OFFERINGS</h1>
+
+    <div>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Course ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Credits</th>
+                <th scope="col">Enroll</th>
+            </tr>
+            </thead>
+            <tbody>
+            <form action="/enroll" method="post">
+                <tr>
+                    <td scope='row'>1111</td>
+                    <td>C</td>
+                    <td>Intro to C Language</td>
+                    <td>3</td>
+                    <td>
+                        <button type="submit" class="enroll-btn">Enroll</button>
+                    </td>
+                </tr>
+                <input type="hidden" name="courseID" value="1111">
+                <input type="hidden" name="title" value="C">
+                <input type="hidden" name="credit" value="3">
+            </form>
+            <form action="/enroll" method="post">
+                <tr>
+                    <td scope='row'>2222</td>
+                    <td>Java</td>
+                    <td>Intro to Java Programming</td>
+                    <td>4</td>
+                    <td>
+                        <button type="submit" class="enroll-btn">Enroll</button>
+                    </td>
+                </tr>
+                <input type="hidden" name="courseID"  value="2222">
+                <input type="hidden" name="title" value="Java">
+                <input type="hidden" name="credit" value="4">
+            </form>
+            <form action="/enroll" method="post">
+                <tr>
+                    <td scope='row'>3333</td>
+                    <td>Python</td>
+                    <td>Python Programming</td>
+                    <td>3</td>
+                    <td>
+                        <button type="submit" class="enroll-btn">Enroll</button>
+                    </td>
+                </tr>
+                <input type="hidden" name="courseID" value="3333">
+                <input type="hidden" name="title" value="Python">
+                <input type="hidden" name="credit" value="3">
+            </form>
+            <!-- <form action="/enroll" method="post">
+                <tr>
+                    <td scope='row'>4444</td>
+                    <td>DBMS</td>
+                    <td>Intro to DBMS</td>
+                    <td>3</td>
+                    <td>
+                        <button type="submit" class="enroll-btn">Enroll</button>
+                    </td>
+                </tr>
+                <input type="hidden" name="courseID" value="4444">
+                <input type="hidden" name="title" value="DBMS">
+                <input type="hidden" name="credit" value="3">
+            </form> -->
+            <form action="/enroll" method="post">
+                <tr>
+                    <td scope='row'>5555</td>
+                    <td>C++</td>
+                    <td>C++ Programming</td>
+                    <td>4</td>
+                    <td>
+                        <button type="submit" class="enroll-btn">Enroll</button>
+                    </td>
+                </tr>
+                <input type="hidden" name="courseID" value="5555">
+                <input type="hidden" name="title" value="C++">
+                <input type="hidden" name="credit" value="4">
+            </form>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <button style="margin-left: 450px; background-color: rgb(79, 0, 154); border-radius: 40px; ">
+           <a style="color: white;" href="/video"> VIDEO DIGITAL LIBRARY</a>
+        </button>
+    </div>
+</div>
+
+</body>
+</html>

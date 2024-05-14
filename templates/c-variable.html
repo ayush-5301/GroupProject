@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(12, 48, 209);
+            color:white;
+        }
+
+        h2{
+            color: rgb(252, 13, 13);
+        }
+
+        h3{
+            color: rgba(31, 21, 177, 0.836);
+        }
+        .container {
+            width: 50%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        p {
+            border-left: 6px solid red;
+            background-color: rgb(219, 250, 255);
+            font-size: large;
+          }
+    </style>
+</head>
+<body style="background-color:rgb(239, 239, 239);">
+  <div class="container"><h1>Variables</h1>
+    <p>
+      A variable is nothing but a name given to a storage area that our programs can manipulate. Each variable in C has a specific type, which determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.
+
+<br><br>  The name of a variable can be composed of letters, digits, and the underscore character. It must begin with either a letter or an underscore. Upper and lowercase letters are distinct because C is case-sensitive. Based on the basic types explained in the previous chapter, there will be the following basic variable types −</p>
+
+    <h2>Type & Description</h2>
+    <h3>1. char</h3>
+    <p>
+        Typically a single octet(one byte). It is an integer type.
+    </p>
+    <h3>
+2. int</h3>
+    <p>
+      The most natural size of integer for the machine.
+    </p>
+    <h3>3. float</h3>
+    <p>
+        A single-precision floating point value.
+    </p>
+    <h3>
+4. double</h3>
+    <p>
+        A double-precision floating point value.
+    </p>
+    <h3>
+5. void</h3>
+    <p>
+        Represents the absence of type.
+    </p>
+
+    <h1>Variable Definition</h1>
+    <p>A variable definition tells the compiler where and how much storage to create for the variable. A variable definition specifies a data type and contains a list of one or more variables of that type as follows −
+<br>
+type variable_list;<br><br>
+Here, type must be a valid C data type including char, w_char, int, float, double, bool, or any user-defined object; and variable_list may consist of one or more identifier names separated by commas. Some valid declarations are shown here −
+<br>
+int    i, j, k;<br>
+char   c, ch;<br>
+float  f, salary;<br>
+double d;<br><br>
+The line int i, j, k; declares and defines the variables i, j, and k; which instruct the compiler to create variables named i, j and k of type int.
+<br><br>
+Variables can be initialized (assigned an initial value) in their declaration. The initializer consists of an equal sign followed by a constant expression as follows −
+<br>
+type variable_name = value;
+      </p>
+      <h1>Variable Declaration</h1>
+      <p>A variable declaration provides assurance to the compiler that there exists a variable with the given type and name so that the compiler can proceed for further compilation without requiring the complete detail about the variable. A variable definition has its meaning at the time of compilation only, the compiler needs actual variable definition at the time of linking the program.
+<br><br>
+A variable declaration is useful when you are using multiple files and you define your variable in one of the files which will be available at the time of linking of the program. You will use the keyword extern to declare a variable at any place. Though you can declare a variable multiple times in your C program, it can be defined only once in a file, a function, or a block of code.
+        </p>
+</div>
+
+</body>
+</html>

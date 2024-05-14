@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Content</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            background-color: rgb(113, 136, 241);
+            color: white;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: left;
+            color: rgb(252, 92, 92);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: rgb(100, 90, 234);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            border-left: 6px solid rgb(168, 89, 89);
+            background-color: rgb(157, 229, 241);
+            font-size: 16px;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #5c84af;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .note {
+            background-color: #f0f0f0;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #ccc;
+        }
+
+        .example {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #ddd;
+        }
+
+        .code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Python <span class="color_h1">Arrays</span></h1>
+    <div class="note">
+        <p><strong>Note:</strong> Python does not have built-in support for Arrays, but Python Lists can be used instead.</p>
+    </div>
+
+    <h2>Arrays</h2>
+    <div class="note">
+        <p><strong>Note:</strong> This page shows you how to use LISTS as ARRAYS, however, to work with arrays in Python you will have to import a library, like the NumPy library.</p>
+    </div>
+
+    <p>Arrays are used to store multiple values in one single variable:</p>
+    <div class="example">
+        <h3>Example</h3>
+        <p>Create an array containing car names:</p>
+        <div class="code">
+            cars = ["Ford", "Volvo", "BMW"]
+        </div>
+    </div>
+
+    <h2>What is an Array?</h2>
+    <p>An array is a special variable, which can hold more than one value at a time.</p>
+    <p>If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:</p>
+    <div class="code">
+        car1 = "Ford" <br>
+        car2 = "Volvo" <br>
+        car3 = "BMW"
+    </div>
+
+    <p>However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?</p>
+    <p>The solution is an array!</p>
+    <p>An array can hold many values under a single name, and you can access the values by referring to an index number.</p>
+
+    <h2>Access the Elements of an Array</h2>
+    <div class="example">
+        <h3>Example</h3>
+        <p>Get the value of the first array item:</p>
+        <div class="code">
+            x = cars[0]
+        </div>
+    </div>
+
+    <h2>The Length of an Array</h2>
+    <div class="example">
+        <h3>Example</h3>
+        <p>Return the number of elements in the <code>cars</code> array:</p>
+        <div class="code">
+            x = len(cars)
+        </div>
+    </div>
+
+    <div class="note">
+        <p><strong>Note:</strong> The length of an array is always one more than the highest array index.</p>
+    </div>
+
+    <h2>Looping Array Elements</h2>
+    <div class="example">
+        <h3>Example</h3>
+        <p>Print each item in the <code>cars</code> array:</p>
+        <div class="code">
+            for x in cars: <br>
+            &nbsp; print(x)
+        </div>
+    </div>
+
+    <h2>Array Methods</h2>
+    <p>Python has a set of built-in methods that you can use on lists/arrays.</p>
+    <div class="note">
+        <p><strong>Note:</strong> Python does not have built-in support for Arrays, but Python Lists can be used instead.</p>
+    </div>
+</div>
+</body>
+</html>
+

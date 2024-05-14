@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css"/>
+
+    <style>
+        body {
+            background-image: url('/static/Home_Page.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Animation for typewriter effect */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        /* Apply typewriter effect to h1 */
+        h1.typewriter {
+            overflow: hidden; /* Ensures text doesn't overflow */
+            border-right: .15em solid rgba(254, 253, 254, 0); /* Cursor effect */
+            white-space: nowrap; /* Prevents wrapping */
+            margin: 0 auto; /* Centers the text */
+            letter-spacing: .05em; /* Adjust spacing between letters */
+            animation: typing 3s steps(30, end); /* Adjust animation duration */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid text-center top-container" style="margin-top: 20px">
+    <img src="/static/Logo.png">
+</div>
+<div class="container">
+    
+    <div class="row" style="z-index: 10;">
+        <div class="col-md-12 text-center" style="margin-top: 30px">
+            <h1 class="typewriter" style="color:blue;">Welcome to EDUGEEK!</h1>
+            <h3 style="margin-top: 40px; color: blue;">An Online Course Portal</h3>
+            <div>
+            <p style="margin-top: 40px; background: rgba(255, 255, 255, 0);">
+                Already registered Student? <a href='signin01'>Login</a></p></div>
+            <p style="margin-top: 10px">Not registered Student? <a href='signup'>Signup</a></p>
+            <p style="margin-top: 40px; background: rgba(255, 255, 255, 0); ">
+                Already registered Teacher? <a href='teachersignin01'>Login</a></p>
+            <p style="margin-top: 10px">Not registered Teacher? <a href='teachersignup'>Signup</a></p>
+            </div>
+        <div>
+            </div>
+
+            </div>
+    </div>
+</div>
+</body>
+</html>

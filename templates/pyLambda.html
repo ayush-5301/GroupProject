@@ -1,0 +1,179 @@
+<head>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(12, 48, 209);
+            color:white;
+        }
+
+        h2{
+            color: rgb(252, 13, 13);
+        }
+
+        h3{
+            color: rgba(31, 21, 177, 0.836);
+        }
+
+        p {
+            border-left: 6px solid red;
+            background-color: rgb(20, 202, 235);
+            font-size: large;
+          }
+
+    </style>
+</head>
+<div class="w3-col l10 m12" id="main" style="background-color:powderblue;">
+
+    <h1>Python <span class="color_h1">Lambda</span></h1>
+
+    <hr>
+    <p class="intro">A lambda function is a small anonymous function.</p>
+    <p class="intro">A lambda function can take any number of arguments, but can only have one expression.</p>
+    <hr>
+
+    <h2>Syntax</h2>
+    <div class="w3-code w3-border notranslate">
+        lambda <em>arguments </em>: <em>expression</em>
+    </div>
+
+    <p>The expression is executed and the result is returned:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>Add 10 to argument <code class="w3-codespan">a</code>, and
+            return the result:</p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                    class="pythonnumbercolor" style="color:red">
+                </span> x = <span class="pythonkeywordcolor" style="color:mediumblue">lambda</span> a : a + <span
+                    class="pythonnumbercolor" style="color:red">10</span><br><span class="pythonkeywordcolor"
+                    style="color:mediumblue">print</span>(x(<span class="pythonnumbercolor" style="color:red">5</span>))
+            </span></div>
+
+    </div>
+
+    <p>Lambda functions can take any number of arguments:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>Multiply argument <code class="w3-codespan">a</code> with argument
+            <code class="w3-codespan">b</code> and return the
+            result:
+        </p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                    class="pythonnumbercolor" style="color:red">
+                </span> x = <span class="pythonkeywordcolor" style="color:mediumblue">lambda</span> a, b : a *
+                b<br><span class="pythonkeywordcolor" style="color:mediumblue">print</span>(x(<span
+                    class="pythonnumbercolor" style="color:red">5</span>, <span class="pythonnumbercolor"
+                    style="color:red">6</span>)) </span></div>
+
+    </div>
+
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>Summarize argument <code class="w3-codespan">a</code>,
+            <code class="w3-codespan">b</code>, and <code class="w3-codespan">c</code> and
+            return the
+            result:
+        </p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                    class="pythonnumbercolor" style="color:red">
+                </span> x = <span class="pythonkeywordcolor" style="color:mediumblue">lambda</span> a, b, c : a + b +
+                c<br><span class="pythonkeywordcolor" style="color:mediumblue">print</span>(x(<span
+                    class="pythonnumbercolor" style="color:red">5</span>, <span class="pythonnumbercolor"
+                    style="color:red">6</span>, <span class="pythonnumbercolor" style="color:red">
+                </span> <span class="pythonnumbercolor" style="color:red">2</span>)) </span></div>
+
+    </div>
+    <hr>
+
+    <h2>Why Use Lambda Functions?</h2>
+
+    <p>The power of lambda is better shown when you use them as an anonymous
+        function inside another function.</p>
+    <p>Say you have a function definition that takes one argument, and that argument
+        will be multiplied with an unknown number:</p>
+
+    <div class="w3-example">
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                <span class="pythonkeywordcolor" style="color:mediumblue">def</span> myfunc(n):<br><span
+                    class="pythonnumbercolor" style="color:red">
+                </span>&nbsp;&nbsp;<span class="pythonkeywordcolor" style="color:mediumblue">return</span> <span
+                    class="pythonkeywordcolor" style="color:mediumblue">lambda</span> a : a * n
+            </span></div>
+    </div>
+
+    <p>Use that function definition to make a function that always doubles the
+        number you send in:</p>
+
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                <span class="pythonkeywordcolor" style="color:mediumblue">def</span> myfunc(n):<br><span
+                    class="pythonnumbercolor" style="color:red">
+                </span>&nbsp;&nbsp;<span class="pythonkeywordcolor" style="color:mediumblue">return</span> <span
+                    class="pythonkeywordcolor" style="color:mediumblue">lambda</span> a : a * n<br><span
+                    class="pythonnumbercolor" style="color:red">
+                </span><br><span class="pythonnumbercolor" style="color:red">
+                </span> mydoubler = myfunc(<span class="pythonnumbercolor" style="color:red">2</span>)<br><span
+                    class="pythonnumbercolor" style="color:red">
+                </span> <br><span class="pythonkeywordcolor" style="color:mediumblue">print</span>(mydoubler(<span
+                    class="pythonnumbercolor" style="color:red">11</span>))<span class="pythonnumbercolor"
+                    style="color:red">
+                </span> </span></div>
+
+    </div>
+
+    <p>Or, use the same function definition to make a function that always <em>triples</em> the
+        number you send in:</p>
+
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                <span class="pythonkeywordcolor" style="color:mediumblue">def</span> myfunc(n):<br><span
+                    class="pythonnumbercolor" style="color:red">
+                </span>&nbsp;&nbsp;<span class="pythonkeywordcolor" style="color:mediumblue">return</span> <span
+                    class="pythonkeywordcolor" style="color:mediumblue">lambda</span> a : a * n<br><span
+                    class="pythonnumbercolor" style="color:red">
+                </span><br><span class="pythonnumbercolor" style="color:red">
+                </span> mytripler = myfunc(<span class="pythonnumbercolor" style="color:red">3</span>)<br><span
+                    class="pythonnumbercolor" style="color:red">
+                </span> <br><span class="pythonkeywordcolor" style="color:mediumblue">print</span>(mytripler(<span
+                    class="pythonnumbercolor" style="color:red">11</span>))<span class="pythonnumbercolor"
+                    style="color:red">
+                </span> </span></div>
+
+    </div>
+
+    <p>Or, use the same function definition to make both functions, in the same
+        program:</p>
+
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                <span class="pythonkeywordcolor" style="color:mediumblue">def</span> myfunc(n):<br><span
+                    class="pythonnumbercolor" style="color:red">
+                </span>&nbsp;&nbsp;<span class="pythonkeywordcolor" style="color:mediumblue">return</span> <span
+                    class="pythonkeywordcolor" style="color:mediumblue">lambda</span> a : a * n<br><span
+                    class="pythonnumbercolor" style="color:red">
+                </span><br><span class="pythonnumbercolor" style="color:red">
+                </span> mydoubler = myfunc(<span class="pythonnumbercolor" style="color:red">2</span>)<br>mytripler =
+                myfunc(<span class="pythonnumbercolor" style="color:red">3</span>)<br><span class="pythonnumbercolor"
+                    style="color:red">
+                </span> <br><span class="pythonkeywordcolor" style="color:mediumblue">print</span>(mydoubler(<span
+                    class="pythonnumbercolor" style="color:red">11</span>))<span class="pythonnumbercolor"
+                    style="color:red">
+                </span><br><span class="pythonkeywordcolor" style="color:mediumblue">print</span>(mytripler(<span
+                    class="pythonnumbercolor" style="color:red">11</span>))<span class="pythonnumbercolor"
+                    style="color:red">
+                </span> </span></div>
+
+    </div>
+
+    <div class="w3-panel w3-note">
+        <p>Use lambda functions when an anonymous function is required for a short period of time.</p>
+    </div>
+
+    <hr>
+
+
+
+
+</div>

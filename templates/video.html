@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eae8ef;
+        }
+
+        .video-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(71, 81, 155);
+            color: #000000;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 0;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        header {
+            background-color: #4071bc;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1100px;
+            max-height: 100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        
+        .video-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .video-wrapper {
+            width: calc(50% - 10px); /* 50% width with margin between videos */
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 30.25%; /* 16:9 aspect ratio (9 / 16 * 100%) */
+            overflow: hidden;
+            height: -40px;
+        }
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Hide controls by default */
+        video::-webkit-media-controls {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Show controls on hover */
+        .video-wrapper:hover video::-webkit-media-controls {
+            opacity: 1;
+        }
+        .back-button{
+            position: fixed; /* Position the button relative to the viewport */
+    top: 0; /* Align the button to the top */
+    left: 0; /* Align the button to the left */
+    margin: 30px; /* Add some margin for spacing */
+    padding: 5px 10px; /* Add padding for better appearance */
+    background-color: #ffffff00; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+        }
+            .back-button img {
+            width: 30px; /* Adjust the width of the image */
+            height: auto; /* Maintain aspect ratio */
+            vertical-align: middle;
+            }
+    </style>
+
+    
+</head>
+<body>
+    <header>
+        <h1>VIDEO DIGITAL LIBRARY</h1>
+    </header>
+    <button class="back-button"><a href="/back-to-video"><img src="/static/back.png" alt="Button Image"></a></button>
+    <div class="container">
+        <h2 style="text-align: left; text-decoration: underline;">C Programming</h2>
+        <div class="video-row">
+            <div class="video-wrapper">
+                <video controls>
+                    <source src="/static/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-title">Introduction to c programming</div>
+            </div>
+            <div class="video-wrapper">
+                <video controls>
+                    <source src="/static/video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-title">C programming in one shot</div>
+            </div>
+            <!-- Add more video wrappers for additional videos -->
+        </div>
+
+        <h2 style="text-align: left; text-decoration: underline">C++ Programming</h2>
+        <div class="video-row">
+            <div class="video-wrapper">
+                <video controls>
+                    <source src="/static/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-title">Introduction to c++ programming</div>
+            </div>
+            <div class="video-wrapper">
+                <video controls>
+                    <source src="/static/video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-title">C++ programming in one shot</div>
+            </div>
+            <!-- Add more video wrappers for additional videos -->
+        </div>
+
+        <h2 style="text-align: left; text-decoration: underline">JAVA Programming</h2>
+        <div class="video-row">
+            <div class="video-wrapper">
+                <video controls>
+                    <source src="/static/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-title">Introduction to JAVA programming</div>
+            </div>
+            <div class="video-wrapper">
+                <video controls>
+                    <source src="/static/video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-title">JAVA programming in one shot</div>
+            </div>
+            <!-- Add more video wrappers for additional videos -->
+        </div>
+
+        <h2 style="text-align: left; text-decoration: underline">Python Programming</h2>
+        <div class="video-row">
+            <div class="video-wrapper">
+                <video controls>
+                    <source src="/static/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-title">Introduction to Python programming</div>
+            </div>
+            <div class="video-wrapper">
+                <video controls>
+                    <source src="/static/video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-title">Python programming in one shot</div>
+            </div>
+            <!-- Add more video wrappers for additional videos -->
+        </div>
+    </div>
+</body>
+</html>

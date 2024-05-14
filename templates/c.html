@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C Language</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 40%;
+            height: 50%;
+            margin:auto;
+            margin-top: 60px;
+            /* margin-left: 20%; Maintain the original margin-left */
+            background-color: #edf0ff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative; /* Add position relative */
+        }
+        
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        h4 {
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .done-button {
+            color: red;
+            cursor: pointer;
+            font-size: inherit;
+            margin-left: auto;
+        }
+        
+        .done-button.green {
+            color: green;
+        }
+        
+        #percentage {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 20%;
+    width: 60%;
+    font-size: 18px; /* Adjust font size as needed */
+    color: #555; /* Change text color */
+    text-decoration: underline; /* Underline text */
+    font-style: italic; /* Apply italic style */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to C Language Course</h1>
+        <br>
+        <br>
+        <h2>Contents</h2>
+        <h4><span>1. </span><a href="/C-Introduction">Introduction</a> <button class="done-button" onclick="toggleDone(this)">Done</button></h4>
+        <h4><span>2. </span><a href="/C-DecisionMaking">Decision Making</a> <button class="done-button" onclick="toggleDone(this)">Done</button></h4>
+        <h4><span>3. </span><a href="/C-ProgramStructure">Program Structure</a> <button class="done-button" onclick="toggleDone(this)">Done</button></h4>
+        <h4><span>4. </span><a href="/C-Variable">Variable</a> <button class="done-button" onclick="toggleDone(this)">Done</button></h4>
+        <h4><span>5. </span><a href="/C-Function">Function</a> <button class="done-button" onclick="toggleDone(this)">Done</button></h4>
+        <h4><span>6. </span><a href="/C-Array">Array</a> <button class="done-button" onclick="toggleDone(this)">Done</button></h4>
+        <h4><span>7. </span><a href="/C-String">String</a> <button class="done-button"  onclick="toggleDone(this)">Done</button></h4>
+        <h4><span>8. </span><a href="/C-Quiz">Quiz</a> <button class="done-button" onclick="toggleDone(this)">Done</button></h4>
+        <div id="percentage"></div> <!-- Moved percentage below the container -->
+    </div>
+    <div>
+        <a href="AG2005.pdf">Download</a>
+    </div>
+
+    <script>
+        // Retrieve completion data from localStorage on page load
+        var greenButtons = parseInt(localStorage.getItem('greenButtons')) || 0;
+        var totalButtons = document.querySelectorAll('.done-button').length;
+        const cid = 1111;
+        // Update completion percentage on page load
+        updatePercentage();
+    
+        // Update button colors on page load
+        updateButtonColors();
+    
+        function updatePercentage() {
+            var percentage = (greenButtons / totalButtons) * 100;
+            document.getElementById('percentage').innerText = 'Completion: ' + percentage.toFixed(2) + '%';
+            saveDetails(percentage.toFixed(2));
+        }
+        async function saveDetails(percentage){
+            try {
+                const resp = await fetch('/saveP',{
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ percentage, cid }),
+                })
+                console.log(resp.data);
+            } catch (error) {
+                console.log(error.message);
+            }
+            
+
+        }
+    
+        function updateButtonColors() {
+            var buttons = document.querySelectorAll('.done-button');
+            buttons.forEach(function(button, index) {
+                // Check if the button index is less than the number of green buttons
+                if (index < greenButtons) {
+                    button.classList.add('green');
+                } else {
+                    button.classList.remove('green');
+                }
+            });
+        }
+    
+        function toggleDone(element) {
+            element.classList.toggle('green');
+            // Update greenButtons based on the number of buttons with the 'green' class
+            greenButtons = document.querySelectorAll('.done-button.green').length;
+            // Update localStorage with the new completion data
+            localStorage.setItem('greenButtons', greenButtons.toString());
+            updatePercentage();
+        }
+    </script>
+    
+    
+    
+</body>
+</html>

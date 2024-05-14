@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('/static/signup.png');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            border: 3px solid #d5e1fe;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            width: 40%;
+            margin: 42px auto 20px; 
+            padding: 20px;
+        }
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #141111;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff; /* blue */
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .cancelbtn {
+            background-color: #f44336; /* red */
+            width: auto;
+            padding: 10px 18px;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        h1 {
+            color: #007bff; /* blue */
+            text-align: center;
+        }
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 20px;
+        }
+
+        .login-form {
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-color: #f1f1f100;
+            width: 38%;
+            margin-left: 30%;
+            padding: 1%;
+            background: rgba(255, 255, 255, 0); /* Transparent white background */
+            margin-top: 1px; /* Adjust the margin-top as needed */
+        }
+    </style>
+</head>
+<body>
+
+<form action="/signup1" method="post">
+    <div class="container">
+        <h1 style="color: rgb(239, 255, 97);">SIGN UP</h1>
+        <p style="color: white; text-shadow: #f1f1f1;">PLEASE FILL IN THIS FORM TO CREATE AN ACCOUNT</p>
+        <hr>
+        <label for="email" style="color: white;"><b>EMAIL</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id ="email">
+        <label for="psw" style="color: white;"><b>PASSWORD</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+        <label for="psw-repeat" style="color: white;"><b>REPEAT PASSWORD</b></label>
+        <input type="password" placeholder="Repeat Password" id="cpsw" required>
+        <br>
+        <div class="clearfix">
+            <button type="reset" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn" onclick="return test()">SIGN UP</button>
+        </div>
+    </div>
+</form>
+
+<form action="/signin01" class="login-form">
+    <button type="submit" class="signupbtn">LOG IN</button>
+</form>
+
+<script>
+    function test() {
+        var pwd=document.getElementById("psw").value;
+        var cpwd=document.getElementById("cpsw").value;
+        if(pwd == cpwd){
+            return true;
+        }
+        else{
+            alert( "password and confirm password are not correct")
+            return false;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background: #407c60;
+        }
+
+        form {
+            width: 60%;
+            background: #02e6fd;
+            margin-left: 20%;
+            padding: 20px;
+        }
+
+        p {
+            background: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        div {
+            background: #00c4ff;
+            border-radius: 10px;
+            padding-bottom: 5px;
+        }
+
+        /* Overlay CSS */
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        #overlay-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="quiz-form" action="#">
+        <h1 style="text-align:center;">Python Quiz</h1>
+        <div>
+            
+            <div>
+                <p>Q1. What is a correct syntax to output "Hello World" in Python?</p>
+                <input type="radio" id="opt1" name="Q1" value="A">
+                <label for="opt1">echo('Hello World')</label><br>
+    
+                <input type="radio" id="opt2" name="Q1" value="B">
+                <label for="opt2">print('Hello World')</label><br>
+    
+                <input type="radio" id="opt3" name="Q1" value="C">
+                <label for="opt3">p('Hello World')</label> <br>
+    
+                <input type="radio" id="opt4" name="Q1" value="D">
+                <label for="opt4">type('Hello World')</label>
+                <br>
+            </div>
+            <div>
+                <p>Q2. How do you insert COMMENTS in Python code?</p>
+                <input type="radio" id="opt5" name="Q2" value="A">
+                <label for="opt5">#This is a comment</label><br>
+    
+                <input type="radio" id="opt6" name="Q2" value="B">
+                <label for="opt6">//This is a comment</label><br>
+    
+                <input type="radio" id="opt7" name="Q2" value="C">
+                <label for="opt7">/This is a comment/</label> <br>
+    
+                <input type="radio" id="opt8" name="Q2" value="D">
+                <label for="opt8">'This is a comment'</label>
+            </div>
+            <div>
+                <p>Q3. Which one is NOT a legal variable name?</p>
+                <input type="radio" id="opt9" name="Q3" value="A">
+                <label for="opt9">_myvar</label><br>
+    
+                <input type="radio" id="opt10" name="Q3" value="B">
+                <label for="opt10">Myvar</label><br>
+    
+                <input type="radio" id="opt11" name="Q3" value="C">
+                <label for="opt11">my_var</label> <br>
+    
+                <input type="radio" id="opt12" name="Q3" value="D">
+                <label for="opt12">my-var</label>
+            </div>
+            <div>
+                <p>Q4. How do you create a variable with the numeric value 5?</p>
+                <input type="radio" id="opt13" name="Q4" value="A">
+                <label for="opt13">Both the other answer are Correct</label><br>
+    
+                <input type="radio" id="opt14" name="Q4" value="B">
+                <label for="opt14">x = int(5)</label><br>
+    
+                <input type="radio" id="opt15" name="Q4" value="C">
+                <label for="opt15">x= 5</label> <br>
+            </div>
+            <div>
+                <p>Q5. What is the correct file extension for Python files? </p>
+                <input type="radio" id="opt16" name="Q5" value="A">
+                <label for="opt16">.pyth</label><br>
+    
+                <input type="radio" id="opt17" name="Q5" value="B">
+                <label for="opt17">.py</label><br>
+    
+                <input type="radio" id="opt18" name="Q5" value="C">
+                <label for="opt18">.pt</label> <br>
+    
+                <input type="radio" id="opt19" name="Q5" value="D">
+                <label for="opt19">.pyt</label>
+            </div>
+            <div>
+                <p>Q6. How do you create a variable with the floating number 2.8? </p>
+                <input type="radio" id="opt20" name="Q6" value="A">
+                <label for="opt20"> x = float(2.8)</label><br>
+    
+                <input type="radio" id="opt21" name="Q6" value="B">
+                <label for="opt21"> Both the other answers are correct</label><br>
+    
+                <input type="radio" id="opt22" name="Q6" value="C">
+                <label for="opt22"> x = 2.8</label> <br>
+    
+            </div>
+            <div>
+                <p>Q7. What is the correct syntax to output the type of a variable or object in Python? </p>
+                <input type="radio" id="opt23" name="Q7" value="A">
+                <label for="opt23"> print(typeof x)</label><br>
+    
+                <input type="radio" id="opt24" name="Q7" value="B">
+                <label for="opt24"> print(type(x))</label><br>
+    
+                <input type="radio" id="opt25" name="Q7" value="C">
+                <label for="opt25"> print(typeOf(x))</label> <br>
+    
+                <input type="radio" id="opt26" name="Q7" value="D">
+                <label for="opt26"> print(typeof(x))</label>
+            </div>
+            <div>
+                <p>Q8. What is the correct way to create a function in Python? </p>
+                <input type="radio" id="opt27" name="Q8" value="A">
+                <label for="opt27"> def myFunction():</label><br>
+    
+                <input type="radio" id="opt28" name="Q8" value="B">
+                <label for="opt28"> create myFunction():</label><br>
+    
+                <input type="radio" id="opt29" name="Q8" value="C">
+                <label for="opt29"> function myfunction():</label> <br>
+            </div>
+            <div>
+                <p>Q9. In Python, 'Hello', is the same as "Hello" </p>
+                <input type="radio" id="opt30" name="Q9" value="A">
+                <label for="opt30"> False</label><br>
+    
+                <input type="radio" id="opt32" name="Q9" value="B">
+                <label for="opt32"> True</label><br>
+            </div>
+            <div>
+                <p>Q10. What is a correct syntax to return the first character in a string? </p>
+                <input type="radio" id="opt33" name="Q10" value="A">
+                <label for="opt33">  x = sub("Hello", 0, 1)</label><br>
+    
+                <input type="radio" id="opt34" name="Q10" value="B">
+                <label for="opt34">  x = "Hello".sub(0, 1)</label><br>
+    
+                <input type="radio" id="opt35" name="Q10" value="C">
+                <label for="opt35">  x = "Hello"[0]</label> <br>
+            </div>
+            
+        </div>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Overlay Content -->
+    <div id="overlay">
+        <div id="overlay-content">
+            <span id="close-button">&times;</span>
+            <h2>Your Score</h2>
+            <p id="score"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('quiz-form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form submission
+            var ansKey = ['B', 'A', 'B', 'A', 'B', 'A', 'B', 'A', 'B', 'A'];
+            var score = 0;
+            for (var i = 1; i <= 10; i++) {
+                var selectedOption = document.querySelector('input[name="Q' + i + '"]:checked');
+                if (selectedOption && selectedOption.value === ansKey[i - 1]) {
+                    score += 1;
+                }
+            }
+            document.getElementById('score').textContent = `Your score is:  + ${score}/10`;
+            document.getElementById('overlay').style.display = 'block';
+        });
+
+        // Close overlay when clicking on the close button
+        document.getElementById('close-button').addEventListener('click', function () {
+            document.getElementById('overlay').style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* Set background color to white */
+        }
+
+        .container {
+            width: 40%; /* Set width of the form */
+            margin: 100px auto; /* Center the form horizontally */
+            padding: 20px;
+            border-radius: 10px;
+            background: #ffffff; /* Set background color of the form */
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2); /* Add a shadow effect */
+            text-align: center; /* Align text center within the form */
+        }
+
+        h2 {
+            color: red;
+            margin-bottom: 10px; /* Add some spacing between elements */
+        }
+
+        h3 {
+            margin-top: 0; /* Remove margin from the top */
+            color: blue;
+            margin-bottom: 20px; /* Add some spacing between elements */
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .error-icon {
+            color: red;
+            margin-top: 20px; /* Add spacing between the error icon and the form */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>This account already exists</h2>
+    <h3>Click to Log In</h3>
+    <form action="/signin01" method="post">
+        <button type="submit">Log In</button>
+    </form>
+  
+    <div class="error-icon">
+        <i class="fas fa-exclamatio

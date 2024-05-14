@@ -1,0 +1,232 @@
+<head>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(12, 48, 209);
+            color:white;
+        }
+
+        h2{
+            color: rgb(252, 13, 13);
+        }
+
+        h3{
+            color: rgba(31, 21, 177, 0.836);
+        }
+
+        p {
+            border-left: 6px solid red;
+            background-color: rgb(20, 202, 235);
+            font-size: large;
+          }
+
+    </style>
+</head>
+<div class="w3-col l10 m12" id="main" style="background-color:powderblue;">
+    <div id="mainLeaderboard" style="overflow:hidden;">
+
+    </div>
+    <h1>Python <span class="color_h1">Tuples</span></h1>
+
+    <hr>
+
+    <div class="w3-codeline notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+            mytuple = (<span class="pythonstringcolor" style="color:brown">"apple"</span>, <span
+                class="pythonstringcolor" style="color:brown">"banana"</span>, <span class="pythonstringcolor"
+                style="color:brown">"cherry"</span>)<span class="pythonnumbercolor" style="color:red">
+            </span> </span></div>
+
+    <hr>
+    <h2>Tuple</h2>
+
+    <p>Tuples are used to store multiple items in a single variable.</p>
+
+    <p>Tuple is one of 4 built-in data types in Python used to store collections of
+        data, the other 3 are List,
+        Set, and Dictionary, all with different
+        qualities and usage.
+    </p>
+
+    <p>A tuple is a collection which is ordered and <strong>unchangeable</strong>.</p>
+
+    <p>Tuples are written with round brackets.</p>
+
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>Create a Tuple:</p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                thistuple = (<span class="pythonstringcolor" style="color:brown">"apple"</span>, <span
+                    class="pythonstringcolor" style="color:brown">"banana"</span>, <span class="pythonstringcolor"
+                    style="color:brown">"cherry"</span>)<br>
+                <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(thistuple)<span
+                    class="pythonnumbercolor" style="color:red">
+                </span> </span></div>
+
+    </div>
+
+    <hr>
+    <h2>Tuple Items</h2>
+
+    <p>Tuple items are ordered, unchangeable, and allow duplicate values.</p>
+
+    <p>Tuple items are indexed, the first item has index <code class="w3-codespan">[0]</code>, the second item has index
+        <code class="w3-codespan">[1]</code> etc.</p>
+
+    <hr>
+
+    <h2>Ordered</h2>
+
+    <p>When we say that tuples are ordered, it means that the items have a defined order, and that order will not
+        change.</p>
+
+    <hr>
+
+    <h2>Unchangeable</h2>
+
+    <p>Tuples are unchangeable, meaning that we cannot change, add or remove items after the tuple has been created.</p>
+
+    <hr>
+
+    <h2>Allow Duplicates</h2>
+    <p>Since tuples are indexed, they can have items with the same value:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>Tuples allow duplicate values:</p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                thistuple = (<span class="pythonstringcolor" style="color:brown">"apple"</span>, <span
+                    class="pythonstringcolor" style="color:brown">"banana"</span>, <span class="pythonstringcolor"
+                    style="color:brown">"cherry"</span>, <span class="pythonstringcolor"
+                    style="color:brown">"apple"</span>, <span class="pythonstringcolor"
+                    style="color:brown">"cherry"</span>)<br>
+                <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(thistuple)<span
+                    class="pythonnumbercolor" style="color:red">
+                </span> </span></div>
+
+    </div>
+
+    <hr>
+
+
+
+    <h2>Tuple Length</h2>
+
+    <p>To determine how many items a tuple has, use the <code class="w3-codespan">
+len()</code> function:</p>
+
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>Print the number of items in the tuple:</p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                thistuple = (<span class="pythonstringcolor" style="color:brown">"apple"</span>, <span
+                    class="pythonstringcolor" style="color:brown">"banana"</span>, <span class="pythonstringcolor"
+                    style="color:brown">"cherry"</span>)<br>
+                <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span class="pythonkeywordcolor"
+                    style="color:mediumblue">len</span>(thistuple))<span class="pythonnumbercolor" style="color:red">
+                </span> </span></div>
+
+    </div>
+
+    <hr>
+
+    <h2>Create Tuple With One Item</h2>
+
+    <p>To create a tuple with only one item, you have to add a comma after the item,
+        otherwise Python will not recognize it as a tuple.</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>One item tuple, remember the comma:</p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                thistuple = (<span class="pythonstringcolor" style="color:brown">"apple"</span>,)<br><span
+                    class="pythonnumbercolor" style="color:red">
+                </span> <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                    class="pythonkeywordcolor" style="color:mediumblue">type</span>(thistuple))<br><br><span
+                    class="commentcolor" style="color:green">#NOT a tuple<br></span>thistuple = (<span
+                    class="pythonstringcolor" style="color:brown">"apple"</span>)<br><span class="pythonnumbercolor"
+                    style="color:red">
+                </span> <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                    class="pythonkeywordcolor" style="color:mediumblue">type</span>(thistuple)) </span></div>
+
+    </div>
+
+    <hr>
+
+    <h2>Tuple Items - Data Types</h2>
+
+    <p>Tuple items can be of any data type:</p>
+
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>String, int and boolean data types:</p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                tuple1 = (<span class="pythonstringcolor" style="color:brown">"apple"</span>, <span
+                    class="pythonstringcolor" style="color:brown">"banana"</span>, <span class="pythonstringcolor"
+                    style="color:brown">"cherry"</span>)<br>
+                tuple2 = (<span class="pythonnumbercolor" style="color:red">1</span>, <span class="pythonnumbercolor"
+                    style="color:red">5</span>, <span class="pythonnumbercolor" style="color:red">7</span>, <span
+                    class="pythonnumbercolor" style="color:red">9</span>, <span class="pythonnumbercolor"
+                    style="color:red">3</span>)<br>
+                tuple3 = (<span class="pythonkeywordcolor" style="color:mediumblue">True</span>, <span
+                    class="pythonkeywordcolor" style="color:mediumblue">False</span>, <span class="pythonkeywordcolor"
+                    style="color:mediumblue">False</span>)<span class="pythonnumbercolor" style="color:red">
+                </span> </span></div>
+
+    </div>
+
+    <p>A tuple can contain different data types:</p>
+
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>A tuple with strings, integers and boolean values:</p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                tuple1 = (<span class="pythonstringcolor" style="color:brown">"abc"</span>, <span
+                    class="pythonnumbercolor" style="color:red">34</span>, <span class="pythonkeywordcolor"
+                    style="color:mediumblue">True</span>, <span class="pythonnumbercolor" style="color:red">40</span>,
+                <span class="pythonstringcolor" style="color:brown">"male"</span>)<span class="pythonnumbercolor"
+                    style="color:red">
+                </span> </span></div>
+        <
+    </div>
+
+    <hr>
+    <h2>type()</h2>
+
+    <p>From Python's perspective, tuples are defined as objects with the data type 'tuple':</p>
+
+    <div class="w3-codeline notranslate">
+        &lt;class 'tuple'&gt;
+    </div>
+
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>What is the data type of a tuple?</p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                mytuple = (<span class="pythonstringcolor" style="color:brown">"apple"</span>, <span
+                    class="pythonstringcolor" style="color:brown">"banana"</span>, <span class="pythonstringcolor"
+                    style="color:brown">"cherry"</span>)<br>
+                <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span class="pythonkeywordcolor"
+                    style="color:mediumblue">type</span>(mytuple))<span class="pythonnumbercolor" style="color:red">
+                </span> </span></div>
+
+    </div>
+
+    <hr>
+    <h2>The tuple() Constructor</h2>
+    <p>It is also possible to use the <span class="w3-codespan">tuple()</span> constructor to make a tuple.</p>
+
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>Using the tuple() method to make a tuple:</p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                thistuple = tuple((<span class="pythonstringcolor" style="color:brown">"apple"</span>, <span
+                    class="pythonstringcolor" style="color:brown">"banana"</span>, <span class="pythonstringcolor"
+                    style="color:brown">"cherry"</span>)) <span class="commentcolor" style="color:green"># note the
+                    double round-brackets<br></span>
+                <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(thistuple)<span
+                    class="pythonnumbercolor" style="color:red">
+                </span> </span></div>
+
+    </div>
+
+
+
+</div>

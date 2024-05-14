@@ -1,0 +1,230 @@
+<head>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(12, 48, 209);
+            color:white;
+        }
+
+        h2{
+            color: rgb(252, 13, 13);
+        }
+
+        h3{
+            color: rgba(31, 21, 177, 0.836);
+        }
+
+        p {
+            border-left: 6px solid red;
+            background-color: rgb(20, 202, 235);
+            font-size: large;
+          }
+
+    </style>
+</head>
+<div class="w3-row w3-white" style="background-color:powderblue;">
+    <div class="w3-col l10 m12" id="main">
+        <h1>Python <span class="color_h1">Strings</span></h1>
+
+        <hr>
+
+        <h2>Strings</h2>
+
+        <p>Strings in python are surrounded by either single quotation marks, or double quotation marks.</p>
+
+        <p><span class="w3-codespan">'hello'</span> is the same as <span class="w3-codespan">"hello"</span>.</p>
+
+        <p>You can display a string literal with the <code class="w3-codespan">print()</code> function:</p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                    <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonstringcolor" style="color:brown">"Hello"</span>)<br>
+                    <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonstringcolor" style="color:brown">'Hello'</span>)<span class="pythonnumbercolor"
+                        style="color:red">
+                    </span> </span></div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.asp?filename=demo_string_literal">Try it
+                Yourself »</a>
+        </div>
+
+        <hr>
+        <h2>Assign String to a Variable</h2>
+
+        <p>Assigning a string to a variable is done with the variable name followed by
+            an equal sign and the string:</p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                    a = <span class="pythonstringcolor" style="color:brown">"Hello"</span><br><span
+                        class="pythonkeywordcolor" style="color:mediumblue">print</span>(a) </span></div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.asp?filename=demo_string_var">Try it
+                Yourself »</a>
+        </div>
+
+        <hr>
+
+        <h2>Multiline Strings</h2>
+
+        <p>You can assign a multiline string to a variable by using three quotes:</p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>You can use three double quotes:</p>
+            <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> a = <span class="pythonstringcolor" style="color:brown">""</span><span
+                        class="pythonstringcolor" style="color:brown">"Lorem ipsum dolor sit amet,<br>consectetur
+                        adipiscing elit,<br>sed do
+                        eiusmod tempor incididunt<br>ut labore et dolore magna aliqua."</span><span
+                        class="pythonstringcolor" style="color:brown">""</span><br><span class="pythonkeywordcolor"
+                        style="color:mediumblue">print</span>(a) </span></div>
+
+        </div>
+
+        <p>Or three single quotes:</p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> a = <span class="pythonstringcolor" style="color:brown">''</span><span
+                        class="pythonstringcolor" style="color:brown">'Lorem ipsum dolor sit amet,<br>consectetur
+                        adipiscing elit,<br>sed do
+                        eiusmod tempor incididunt<br>ut labore et dolore magna aliqua.'</span><span
+                        class="pythonstringcolor" style="color:brown">''</span><br><span class="pythonkeywordcolor"
+                        style="color:mediumblue">print</span>(a) </span></div>
+
+        </div>
+
+        <div class="w3-panel w3-note">
+            <p><strong>Note:</strong> in the result, the line breaks are inserted at the same position as in the code.
+            </p>
+        </div>
+
+
+        <hr>
+
+        <h2>Strings are Arrays</h2>
+
+        <p>Like many other popular programming languages, strings in Python are arrays of bytes representing unicode
+            characters.</p>
+        <p>However, Python does not have a character data type, a single character is simply a string with a length of
+            1.</p>
+        <p>Square brackets can be used to access elements of the string.</p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Get the character at position 1 (remember that the first character has the
+                position 0):</p>
+            <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                    a = <span class="pythonstringcolor" style="color:brown">"Hello, World!"</span><br>
+                    <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(a[<span
+                        class="pythonnumbercolor" style="color:red">1</span>])<span class="pythonnumbercolor"
+                        style="color:red">
+                    </span> </span></div>
+        </div>
+        <hr>
+
+        <h2>Looping Through a String</h2>
+
+        <p>Since strings are arrays, we can loop through the characters in a string, with a <code
+                class="w3-codespan">for</code> loop.</p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Loop through the letters in the word "banana":</p>
+            <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> <span class="pythonkeywordcolor" style="color:mediumblue">for</span> x <span
+                        class="pythonkeywordcolor" style="color:mediumblue">in</span> <span class="pythonstringcolor"
+                        style="color:brown">"banana"</span>:<br>&nbsp; <span class="pythonkeywordcolor"
+                        style="color:mediumblue">print</span>(x)<span class="pythonnumbercolor" style="color:red">
+                    </span> </span></div>
+        </div>
+
+        <p>Learn more about For Loops in our <a href="python_for_loops.asp">Python For Loops</a> chapter.</p>
+
+        <hr>
+
+        <h2>String Length</h2>
+
+        <p>To get the length of a string, use the <code class="w3-codespan">len()</code> function.</p>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>The <code class="w3-codespan">len()</code> function returns the length of a string:</p>
+            <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                    a = <span class="pythonstringcolor" style="color:brown">"Hello, World!"</span><br>
+                    <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonkeywordcolor" style="color:mediumblue">len</span>(a))<span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> </span></div>
+
+        </div>
+        <hr>
+        <h2>Check String</h2>
+
+        <p>To check if a certain phrase or character is present in a string, we can use
+            the keyword
+            <code class="w3-codespan">in</code>.
+        </p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Check if "free" is present in the following text:</p>
+            <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> txt = <span class="pythonstringcolor" style="color:brown">"The best things in life are
+                        free!"</span><br><span class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonstringcolor" style="color:brown">"free"</span> <span class="pythonkeywordcolor"
+                        style="color:mediumblue">in</span> txt)<br><span class="pythonnumbercolor" style="color:red">
+                    </span> </span></div>
+        </div>
+
+        <p>Use it in an <code class="w3-codespan">if</code> statement:</p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Print only if "free" is present:</p>
+            <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> txt = <span class="pythonstringcolor" style="color:brown">"The best things in life are
+                        free!"</span><br><span class="pythonkeywordcolor" style="color:mediumblue">if</span> <span
+                        class="pythonstringcolor" style="color:brown">"free"</span> <span class="pythonkeywordcolor"
+                        style="color:mediumblue">in</span> txt:<br>&nbsp;
+                    <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonstringcolor" style="color:brown">"Yes, 'free' is present."</span>)<span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> </span></div>
+        </div>
+        <hr>
+
+        <h2>Check if NOT</h2>
+
+        <p>To check if a certain phrase or character is NOT present in a string, we can use
+            the keyword <code class="w3-codespan">not in</code>.</p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Check if "expensive" is NOT present in the following text:</p>
+            <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> txt = <span class="pythonstringcolor" style="color:brown">"The best things in life are
+                        free!"</span><br><span class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonstringcolor" style="color:brown">"expensive"</span> not <span
+                        class="pythonkeywordcolor" style="color:mediumblue">in</span> txt)<span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> </span></div>
+
+        </div>
+
+
+
+        <hr>
+        <br>
+
+    </div>
+
+</div>

@@ -1,0 +1,217 @@
+<head>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(12, 48, 209);
+            color:white;
+        }
+
+        h2{
+            color: rgb(252, 13, 13);
+        }
+
+        h3{
+            color: rgba(31, 21, 177, 0.836);
+        }
+
+        p {
+            border-left: 6px solid red;
+            background-color: rgb(20, 202, 235);
+            font-size: large;
+          }
+
+    </style>
+</head>
+<div class="w3-col l10 m12" id="main" style="background-color:powderblue;">
+    <div id="mainLeaderboard" style="overflow:hidden;">
+
+
+    </div>
+    <h1>Python <span class="color_h1">Sets</span></h1>
+
+    <hr>
+
+    <div class="w3-codeline notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+            myset = {<span class="pythonstringcolor" style="color:brown">"apple"</span>, <span class="pythonstringcolor"
+                style="color:brown">"banana"</span>, <span class="pythonstringcolor"
+                style="color:brown">"cherry"</span>}<span class="pythonnumbercolor" style="color:red">
+            </span> </span></div>
+
+    <hr>
+    <h2>Set</h2>
+
+    <p>Sets are used to store multiple items in a single variable.</p>
+
+    <p>Set is one of 4 built-in data types in Python used to store collections of
+        data, the other 3 are List,
+        Tuple, and Dictionary, all with different
+        qualities and usage.
+    </p>
+
+    <p>A set is a collection which is <em>unordered</em>, <em>unchangeable*</em>, and <em>unindexed</em>.</p>
+
+    <div class="w3-panel w3-note">
+        <p><strong>* Note:</strong> Set <em>items</em> are unchangeable, but you can remove
+            items and add new items.</p>
+    </div>
+
+
+    <p>Sets are written with curly brackets.</p>
+
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>Create a Set:</p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                thisset = {<span class="pythonstringcolor" style="color:brown">"apple"</span>, <span
+                    class="pythonstringcolor" style="color:brown">"banana"</span>, <span class="pythonstringcolor"
+                    style="color:brown">"cherry"</span>}<br><span class="pythonkeywordcolor"
+                    style="color:mediumblue">print</span>(thisset) </span></div>
+    </div>
+
+    <div class="w3-panel w3-note">
+        <p><strong>Note:</strong> Sets are unordered, so you cannot be sure in which
+            order the items will appear.</p>
+    </div>
+
+    <hr>
+
+    <h2>Set Items</h2>
+
+    <p>Set items are unordered, unchangeable, and do not allow duplicate values.</p>
+
+    <hr>
+
+    <h2>Unordered</h2>
+
+    <p>Unordered means that the items in a set do not have a defined order.</p>
+    <p>Set items can appear in a different order every time you use them,
+        and cannot be referred to by index or key.</p>
+
+    <hr>
+    <h2>Unchangeable</h2>
+
+    <p>Set items are unchangeable, meaning that we cannot change the items after the set has been created.</p>
+    <div class="w3-panel w3-note">
+        <p>Once a set is created, you cannot change its items, but you can remove items
+            and add new items.</p>
+    </div>
+
+    <hr>
+
+    <h2>Duplicates Not Allowed</h2>
+    <p>Sets cannot have two items with the same value.</p>
+
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>Duplicate values will be ignored:</p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                    class="pythonnumbercolor" style="color:red">
+                </span> thisset = {<span class="pythonstringcolor" style="color:brown">"apple"</span>, <span
+                    class="pythonstringcolor" style="color:brown">"banana"</span>, <span class="pythonstringcolor"
+                    style="color:brown">"cherry"</span>, <span class="pythonstringcolor"
+                    style="color:brown">"apple"</span>}<br><br><span class="pythonnumbercolor" style="color:red">
+                </span> <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(thisset)<span
+                    class="pythonnumbercolor" style="color:red">
+                </span> </span></div>
+
+    </div>
+
+    <hr>
+
+    <h2>Get the Length of a Set</h2>
+
+    <p>To determine how many items a set has, use the <code class="w3-codespan">len()</code>
+        function.</p>
+
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>Get the number of items in a set:</p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                    class="pythonnumbercolor" style="color:red">
+                </span> thisset = {<span class="pythonstringcolor" style="color:brown">"apple"</span>, <span
+                    class="pythonstringcolor" style="color:brown">"banana"</span>, <span class="pythonstringcolor"
+                    style="color:brown">"cherry"</span>}<br><br><span class="pythonnumbercolor" style="color:red">
+                </span> <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                    class="pythonkeywordcolor" style="color:mediumblue">len</span>(thisset)) </span></div>
+     >
+    </div>
+
+    <hr>
+    <h2>Set Items - Data Types</h2>
+
+    <p>Set items can be of any data type:</p>
+
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>String, int and boolean data types:</p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                    class="pythonnumbercolor" style="color:red">
+                </span> set1 = {<span class="pythonstringcolor" style="color:brown">"apple"</span>, <span
+                    class="pythonstringcolor" style="color:brown">"banana"</span>, <span class="pythonstringcolor"
+                    style="color:brown">"cherry"</span>}<br><span class="pythonnumbercolor" style="color:red">
+                </span> set2 = {<span class="pythonnumbercolor" style="color:red">1</span>, <span
+                    class="pythonnumbercolor" style="color:red">5</span>, <span class="pythonnumbercolor"
+                    style="color:red">7</span>, <span class="pythonnumbercolor" style="color:red">9</span>, <span
+                    class="pythonnumbercolor" style="color:red">3</span>}<br><span class="pythonnumbercolor"
+                    style="color:red">
+                </span> set3 = {<span class="pythonkeywordcolor" style="color:mediumblue">True</span>, <span
+                    class="pythonkeywordcolor" style="color:mediumblue">False</span>, <span class="pythonkeywordcolor"
+                    style="color:mediumblue">False</span>} </span></div>
+      ]
+    </div>
+
+    <p>A set can contain different data types:</p>
+
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>A set with strings, integers and boolean values:</p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                    class="pythonnumbercolor" style="color:red">
+                </span> set1 = {<span class="pythonstringcolor" style="color:brown">"abc"</span>, <span
+                    class="pythonnumbercolor" style="color:red">34</span>, <span class="pythonkeywordcolor"
+                    style="color:mediumblue">True</span>, <span class="pythonnumbercolor" style="color:red">40</span>,
+                <span class="pythonstringcolor" style="color:brown">"male"</span>} </span></div>
+
+    </div>
+
+    <hr>
+    <h2>type()</h2>
+
+    <p>From Python's perspective, sets are defined as objects with the data type 'set':</p>
+
+    <div class="w3-codeline notranslate">
+        &lt;class 'set'&gt;
+    </div>
+
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>What is the data type of a set?</p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                myset = {<span class="pythonstringcolor" style="color:brown">"apple"</span>, <span
+                    class="pythonstringcolor" style="color:brown">"banana"</span>, <span class="pythonstringcolor"
+                    style="color:brown">"cherry"</span>}<br>
+                <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span class="pythonkeywordcolor"
+                    style="color:mediumblue">type</span>(myset))<span class="pythonnumbercolor" style="color:red">
+                </span> </span></div>
+
+    </div>
+
+    <hr>
+
+    <h2>The set() Constructor</h2>
+    <p>It is also possible to use the <span class="w3-codespan">set()</span>
+        constructor to make a set.</p>
+
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>Using the set() constructor to make a set:</p>
+        <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black">
+                thisset = set((<span class="pythonstringcolor" style="color:brown">"apple"</span>, <span
+                    class="pythonstringcolor" style="color:brown">"banana"</span>, <span class="pythonstringcolor"
+                    style="color:brown">"cherry"</span>)) <span class="commentcolor" style="color:green"># note the
+                    double round-brackets<br></span>
+                <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(thisset) </span></div>
+    </div>
+
+
+</div>

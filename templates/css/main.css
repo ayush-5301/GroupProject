@@ -1,0 +1,10 @@
+
+body {
+    background-image: url('\images\peakpx.jpg');
+    background-size: cover; /* Cover the entire background */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    background-position: center; /* Center the background image */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+}
+

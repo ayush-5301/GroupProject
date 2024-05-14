@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Home</title>
+    <style>
+        button {
+        cursor:pointer;
+        border:none;
+        decoration:none;
+        background:blue;
+        color:white;
+        padding: 7px 18px;
+        border-radius:3px;
+        }
+        div {
+        border-radius: 10px;
+        }
+    </style>
+</head>
+<body style="display:flex; flex-wrap: wrap; background:#4c4a4a; padding:35px">
+    {% for item in data1 %}
+        <div style="background:#00f2ff; width:310px; height:100px; margin:0px 10px 15px 0px";>
+            <tr >
+                <td><h3 align="center">{{item}}</h3></td>
+                <td><button style="margin-left:80px">Click to Show Details</button></td>
+            </tr>
+        </div>
+    {% endfor %}
+</body>
+</html>

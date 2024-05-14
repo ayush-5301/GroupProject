@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Content</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            background-color: rgb(12, 48, 209);
+            color: white;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align:left;
+            color: rgb(252, 13, 13);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: rgba(31, 21, 177, 0.836);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            border-left: 6px solid red;
+            background-color: rgb(20, 202, 235);
+            font-size: 16px;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+
+        .note {
+            background-color: #f0f0f0;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #ccc;
+        }
+
+        .example {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #ddd;
+        }
+
+        .code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Python <span class="color_h1">Dictionaries</span></h1>
+
+    <hr>
+
+    <div class="code">
+        thisdict = {<br>
+        &nbsp;&nbsp;"brand": "Ford",<br>
+        &nbsp;&nbsp;"model": "Mustang",<br>
+        &nbsp;&nbsp;"year": 1964<br>
+        }
+    </div>
+
+    <hr>
+
+    <h2>Dictionary</h2>
+    <p>Dictionaries are used to store data values in key:value pairs.</p>
+    <p>A dictionary is a collection which is ordered*, changeable and do not allow duplicates.</p>
+
+    <div class="note">
+        <p>As of Python version 3.7, dictionaries are <em>ordered</em>.
+            In Python 3.6 and earlier, dictionaries are <em>unordered</em>.</p>
+    </div>
+
+    <p>Dictionaries are written with curly brackets, and have keys and values:</p>
+
+    <div class="example">
+        <h3>Example</h3>
+        <p>Create and print a dictionary:</p>
+        <div class="code">
+            thisdict = {<br>
+            &nbsp;&nbsp;"brand": "Ford",<br>
+            &nbsp;&nbsp;"model": "Mustang",<br>
+            &nbsp;&nbsp;"year": 1964<br>
+            }<br>
+            print(thisdict)
+        </div>
+    </div>
+
+    <hr>
+    <h2>Dictionary Items</h2>
+
+    <p>Dictionary items are ordered, changeable, and do not allow duplicates.</p>
+    <p>Dictionary items are presented in key:value pairs, and can be referred to by using the key name.</p>
+
+    <div class="example">
+        <h3>Example</h3>
+        <p>Print the "brand" value of the dictionary:</p>
+        <div class="code">
+            print(thisdict["brand"])
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>Ordered or Unordered?</h2>
+
+    <div class="note">
+        <p>As of Python version 3.7, dictionaries are <em>ordered</em>.
+            In Python 3.6 and earlier, dictionaries are <em>unordered</em>.</p>
+    </div>
+
+    <p>When we say that dictionaries are ordered, it means that the items have a defined order, and that order will not
+        change.</p>
+
+    <p>Unordered means that the items do not have a defined order, you cannot refer to an item by using an index.</p>
+
+    <hr>
+
+    <h2>Changeable</h2>
+
+    <p>Dictionaries are changeable, meaning that we can change, add, or remove items after the dictionary has been
+        created.</p>
+
+    <hr>
+
+    <h2>Duplicates Not Allowed</h2>
+    <p>Dictionaries cannot have two items with the same key:</p>
+    <div class="example">
+        <h3>Example</h3>
+        <p>Duplicate values will overwrite existing values:</p>
+        <div class="code">
+            thisdict = {<br>
+            &nbsp;&nbsp;"brand": "Ford",<br>
+            &nbsp;&nbsp;"model": "Mustang",<br>
+            &nbsp;&nbsp;"year": 1964,<br>
+            &nbsp;&nbsp;"year": 2020<br>
+            }<br>
+            print(thisdict)
+        </div>
+    </div>
+
+    <hr>
+
+
+    <h2>Dictionary Length</h2>
+
+    <p>To determine how many items a dictionary has, use the <code>len()</code> function:</p>
+
+    <div class="example">
+        <h3>Example</h3>
+        <p>Print the number of items in the dictionary:</p>
+        <div class="code">
+            print(len(thisdict))
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>Dictionary Items - Data Types</h2>
+
+    <p>The values in dictionary items can be of any data type:</p>
+
+    <div class="example">
+        <h3>Example</h3>
+        <p>String, int, boolean, and list data types:</p>
+        <div class="code">
+            thisdict = {<br>
+            &nbsp;&nbsp;"brand": "Ford",<br>
+            &nbsp;&nbsp;"electric": False,<br>
+            &nbsp;&nbsp;"year": 1964,<br>
+            &nbsp;&nbsp;"colors": ["red", "white", "blue"]<br>
+            }
+        </div>
+    </div>
+
+    <hr>
+    <h2>type()</h2>
+
+    <p>From Python's perspective, dictionaries are defined as objects with the data type 'dict':</p>
+
+    <div class="code">
+        &lt;class 'dict'&gt;
+    </div>
+
+    <div class="example">
+        <h3>Example</h3>
+        <p>Print the data type of a dictionary:</p>
+        <div class="code">
+            thisdict = {<br>
+            &nbsp;&nbsp;"brand": "Ford",<br>
+            &nbsp;&nbsp;"model": "Mustang",<br>
+            &nbsp;&nbsp;"year": 1964<br>
+            }<br>
+            print(type(thisdict))
+        </div>
+    </div>
+
+    <hr>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Courses</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css"/>
+    <style>
+        body {
+            background: #e0e0e0;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            background: blue;
+            color: white;
+            padding: 7px 18px;
+            border-radius: 500px;
+        }
+
+        button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background: #1e90ff;
+        }
+
+        .container {
+            background: #edf0ff;
+            margin-top: 50px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        header {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav ul li a.active {
+            background-color: blue;
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <nav>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="/signin0" class="nav-link">Classes</a></li>
+                <li class="nav-item"><a href="" class="nav-link active">My Profile</a></li>
+                <li style="margin-left: 700px; margin-top: 10px;"><a href="/logout" >Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 style="text-align: center;">MY COURSES</h1>
+    <div>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Course ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Credits</th>
+                <th scope="col">Actions</th>
+                <th scope="col">Progress</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item.1 }}</td>
+                <td>{{ item.2 }}</td>
+                <td>{{ item.3 }}</td>
+                <td>
+                    <button type="button">
+                        <a href="/{{ item.1 }}" style="style:none;text-decoration:none;color:white;">Enter The Course</a>
+                    </button>
+                    <button type="button">
+                        <a href="/UnEnroll?courseid={{ item.1 }}" style="style:none;text-decoration:none;color:white;">Unenroll</a>
+                    </button>
+                </td>
+                <td>
+                    {% if item.4 %}
+                        {{ item.4 }}% Complete
+                    {% else %}
+                        Not Started
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

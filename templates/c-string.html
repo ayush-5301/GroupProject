@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(12, 48, 209);
+            color:white;
+        }
+
+        h2{
+            color: rgb(252, 13, 13);
+        }
+
+        h3{
+            color: rgba(31, 21, 177, 0.836);
+        }
+        .container {
+            width: 50%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        p {
+            border-left: 6px solid red;
+            background-color: rgb(220, 249, 254);
+            font-size: large;
+          }
+    </style>
+</head>
+<body style="background-color:rgb(241, 241, 241);">
+   <div class="container"> <h1>Strings</h1>
+    <p>Strings are actually one-dimensional array of characters terminated by a null character '\0'. Thus a null-terminated string contains the characters that comprise the string followed by a null.
+<br><br>
+The following declaration and initialization create a string consisting of the word "Hello". To hold the null character at the end of the array, the size of the character array containing the string is one more than the number of characters in the word "Hello."
+<br>
+
+char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+<br><br>If you follow the rule of array initialization then you can write the above statement as follows −
+<br>
+char greeting[] = "Hello";
+<br>Actually, you do not place the null character at the end of a string constant. The C compiler automatically places the '\0' at the end of the string when it initializes the array.
+
+  </p>
+<br>
+    <h2>Function & Purpose</h2>
+    <p>
+      C supports a wide range of functions that manipulate null-terminated strings −
+      </p>
+
+<h3>
+      1. strcpy(s1, s2);
+</h3>
+    <p>Copies string s2 into string s1.
+      </p>
+<br>
+<h3>
+    2. strcat(s1, s2);
+</h3>
+    <p>Concatenates string s2 onto the end of string s1.
+      </p>
+<br>
+<h3>
+    3. strlen(s1);
+</h3>
+    <p>Returns the length of string s1.
+      </p>
+<br>
+<h3>
+      4. strcmp(s1, s2);
+</h3>
+    <p>Returns 0 if s1 and s2 are the same; less than 0 if s1smaller than s2; greater than 0 if s1 greater than s2.
+      </p>
+      <br>
+      <h3>
+        5. strchr(s1, ch);
+      </h3>
+          <p>Returns a pointer to the first occurrence of character ch in string s1.</p>
+            <br>
+            <h3>
+                  6.strstr(s1, s2);
+            </h3>
+                <p>Returns a pointer to the first occurrence of string s2 in string s1.</p>
+</div>
+</body>
+</html>

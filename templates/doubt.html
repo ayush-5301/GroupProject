@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doubt</title>
+</head>
+<body style="background: #8d8d8d">
+<div style="width:60%; margin-left:20%; background: white; padding: 20px; border-radius:10px">
+    <div style="display:flex; flex-direction:column;  ">
+        {% for item in data %}
+       <div style="margin-top:20px"><b>{{ item.0}}</b></div>
+          <div style=" margin-top:5px">{{ item.1 }}</div>
+    {% endfor %}
+    </div>
+    <form action="/doubts" method="post" style="margin-top:50px">
+        <p><label for="doubts">Ask Doubts</label></p>
+          <textarea id="doubts" name="doubt" rows="6" cols="50"></textarea>
+          <br>
+          <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>

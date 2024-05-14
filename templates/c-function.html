@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="../css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(12, 48, 209);
+            color:white;
+        }
+
+        h2{
+            color: rgb(252, 13, 13);
+        }
+
+        h3{
+            color: rgba(31, 21, 177, 0.836);
+        }
+        .container {
+            width: 50%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        p {
+            border-left: 6px solid red;
+            background-color: rgb(225, 248, 252);
+            font-size: large;
+          }
+    </style>
+</head>
+<body style="background-color:rgb(237, 237, 237);">
+  <div class="container">  <h1>Functions</h1>
+    <p>A function is a group of statements that together perform a task. Every C program has at least one function, which is main(), and all the most trivial programs can define additional functions.
+
+<br>You can divide up your code into separate functions. How you divide up your code among different functions is up to you, but logically the division is such that each function performs a specific task.
+
+<br>A function declaration tells the compiler about a function's name, return type, and parameters. A function definition provides the actual body of the function.
+
+<br>The C standard library provides numerous built-in functions that your program can call. For example, strcat() to concatenate two strings, memcpy() to copy one memory location to another location, and many more functions.
+
+<br>A function can also be referred as a method or a sub-routine or a procedure, etc.
+    </p>
+    <h1>Defining a Function</h1>
+    <p>A function definition in C programming consists of a function header and a function body. Here are all the parts of a function −
+<br><br>
+<b>Return Type</b> − A function may return a value. The return_type is the data type of the value the function returns. Some functions perform the desired operations without returning a value. In this case, the return_type is the keyword void.
+<br><br>
+<b>Function Name</b> − This is the actual name of the function. The function name and the parameter list together constitute the function signature.
+<br><br>
+<b>Parameters</b> − A parameter is like a placeholder. When a function is invoked, you pass a value to the parameter. This value is referred to as actual parameter or argument. The parameter list refers to the type, order, and number of the parameters of a function. Parameters are optional; that is, a function may contain no parameters.
+<br><br>
+<b>Function Body</b> − The function body contains a collection of statements that define what the function does.
+    </p>
+    <h1>Function Declarations</h1>
+    <p>
+      A function declaration tells the compiler about a function name and how to call the function. The actual body of the function can be defined separately.
+<br><br>
+A function declaration has the following parts −
+<br>
+return_type function_name( parameter list );
+<br>For the above defined function max(), the function declaration is as follows −
+<br>
+int max(int num1, int num2);
+<br><br>Parameter names are not important in function declaration only their type is required, so the following is also a valid declaration −
+<br>
+int max(int, int);
+<br>Function declaration is required when you define a function in one source file and you call that function in another file. In such case, you should declare the function at the top of the file calling the function.
+    </p>
+    <h1>Calling a Function</h1>
+    <p>While creating a C function, you give a definition of what the function has to do. To use a function, you will have to call that function to perform the defined task.
+<br><br>
+When a program calls a function, the program control is transferred to the called function. A called function performs a defined task and when its return statement is executed or when its function-ending closing brace is reached, it returns the program control back to the main program.
+<br><br>
+To call a function, you simply need to pass the required parameters along with the function name, and if the function returns a value, then you can store the returned value.
+    </p>
+
+</div>
+</body>
+</html>
